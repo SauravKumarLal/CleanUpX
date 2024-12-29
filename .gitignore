@@ -1,0 +1,47 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+*.pem
+outline.md
+legacy
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+# Remove this if you're tracking vercel-specific configuration
+secrete.txt
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# editor configs
+.vscode/
+.idea/
+
+# drizzle ORM (if applicable)
+drizzle/
+*.db
