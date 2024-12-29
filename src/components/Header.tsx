@@ -18,8 +18,8 @@ import { EthereumPrivateKeyProvider } from "@web3auth/ethereum-provider"
 import { useMediaQuery } from "@/hooks/useMediaQuery"
 import { createUser, getUnreadNotifications, markNotificationAsRead, getUserByEmail, getUserBalance } from "@/utils/db/actions"
 
-const clientId = "BIZG6GlauyVfYEDcJghr8bFhnJnnq5e0G2Nlfo1SQwBtSMxq1R_wmoZ-1z3AgXoTf5jbAM-gV4Kx37MthjypyAs";
-
+const clientId = process.env.NEXT_PUBLIC_WEB3_AUTH_CLIENT_ID;
+//
 const chainConfig = {
   chainNamespace: CHAIN_NAMESPACES.EIP155,
   chainId: "0xaa36a7",
@@ -37,7 +37,8 @@ const privateKeyProvider = new EthereumPrivateKeyProvider({
 
 const web3auth = new Web3Auth({
   clientId,
-  web3AuthNetwork: WEB3AUTH_NETWORK.TESTNET, // Changed from SAPPHIRE_MAINNET to TESTNET
+  // web3AuthNetwork: WEB3AUTH_NETWORK.TESTNET, // Changed from SAPPHIRE_MAINNET to TESTNET
+  web3AuthNetwork: "sapphire_devnet", // Changed from SAPPHIRE_MAINNET to TESTNET
   privateKeyProvider,
 });
 
